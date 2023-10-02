@@ -1,4 +1,5 @@
 let length;
+let finalPassword;
 let lengthEle = document.getElementById("length");
 function updateLength() {
   document.getElementById("passLength").innerHTML = `${lengthEle.value}`;
@@ -14,6 +15,7 @@ document.getElementById("generateBtn").addEventListener("click", function () {
   document.getElementById("innerdiv1").style.padding = "0.93rem";
   document.getElementById("innerdiv1").style.fontWeight = "bold";
   document.getElementById("GenPass").innerHTML = password;
+  finalPassword=password;
 });
 function generate(string){
     let password = "";
@@ -69,4 +71,26 @@ function generatePassword(){
     // console.log(filteredstr.length)
     // console.log("end");
     return password;
+}
+document.getElementById("copyContent").addEventListener("click",() => {
+    if(finalPassword){
+        copyContent();
+    }
+});
+async function copyContent(){
+    try{
+        await navigator.clipboard.writeText(finalPassword);
+        document.getElementById("copyText").innerText = "copied";
+        document.getElementById("copyText").style.display = "inline";
+        setTimeout(function (){
+            document.getElementById("copyText").style.display = "none";
+        },1000)
+    }
+    catch(e){
+        document.getElementById("copyText").innerText = "failed";
+        document.getElementById("copyText").style.display = "inline";
+        setTimeout(function (){
+            document.getElementById("copyText").style.display = "none";
+        },1000)
+    }
 }

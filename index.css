@@ -21,10 +21,12 @@ body{
     border-radius: 0.3rem;
     padding: 1.5rem;
 }
-#innerdiv1>img{
+#innerdiv1>button{
     position: absolute;
     right: 0.5rem;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
 }
 #innerdiv2{
     display: flex;
@@ -43,4 +45,14 @@ body{
     padding: 0.5rem;
     border-radius: 0.2rem;
     cursor: pointer;
+}
+#copyText{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 0.2rem;
+    color: black;
+    position: absolute;
+    top: -0.6rem;
+    right: -1.8rem;
+    display: none;
 }
