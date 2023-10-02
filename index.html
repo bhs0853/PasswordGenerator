@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Password Generator</h1>
+        <div id="innerdiv1">
+            <div id="GenPass"></div>
+            <img src="./assests/5418785-200.png" alt="" width="20rem" >
+        </div>
+        <div id="innerdiv2">
+            <div style="display: flex;">
+                <div>Password Length: </div>
+                <div style="padding-left: 0.3rem;" id="passLength"> </div>
+            </div>
+            <div>
+                <input type="range" name="slider" id="length" min="4" max="14" step="1" value="8">
+            </div>
+            <div style="display: flex;">
+                <input type="checkbox" name="" id="upperCase"><p>Include UpperCase Letter</p>
+            </div>
+            <div style="display: flex;">
+                <input type="checkbox" name="" id="lowerCase"><p>Include LowerCase Letter</p>
+            </div>
+            <div style="display: flex;">
+                <input type="checkbox" name="" id="number"><p>Include Numbers</p></div>
+            <div style="display: flex;">
+                <input type="checkbox" name="" id="symbol"><p>Include Symbols</p>
+            </div>    
+            <div style="display: flex;">
+                <div>Password Strength : </div>
+                <div id="strength" style="margin-left: 0.3rem;"> </div>
+            </div>       
+            <button id="generateBtn">Generate Password</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
